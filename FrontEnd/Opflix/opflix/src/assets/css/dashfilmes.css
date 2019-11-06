@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.naosei2 table{
+    width: 100%;
+    
+}
+
+table, th, td {
+    border: 2.5px solid black;
+    box-shadow: black;
+    border-collapse: collapse;
+    
+  }
+  th, td {
+    padding: 15px;
+  }
+  .naosei{
+      display: flex;
+      justify-content: space-evenly;   
+  }
+  form{
+      height: 100px;
+      height: 100px;
+  }
+  
+
