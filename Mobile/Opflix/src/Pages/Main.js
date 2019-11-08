@@ -2,20 +2,45 @@ import React, {
     Component,
 } from 'react'
 
-import {    
+import {
     Text,
-    View
+    View,
+    Image,
+    StyleSheet,
 } from 'react-native'
 
+
+
+const styles = StyleSheet.create({
+
+    tabBarEstilizacao: {
+        width: 25,
+        height: 25,
+
+    },
+
+
+
+
+})
+
 class Main extends Component {
-
-
+    static navigationOptions = {
+        tabBarIcon: () => (
+            <Image
+                source={require('../assets/popcorn.png')}
+                style={styles.tabBarEstilizacao}
+            />
+        ),
+    };
 
     render() {
         return (
-            <Text>ola</Text>
-            );
+            <View>
+                <Text>so para funcionar</Text>
+            </View>
+        );
 
     }
 }
-export default Main
+export default Main;
