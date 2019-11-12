@@ -53,8 +53,8 @@ ALTER TABLE Usuarios DROP column Permissao
 
 select * from usuarios
 
-ALTER TABLE Usuarios add Imagem Image
 
+update Usuarios set Imagem = 'https://i.ytimg.com/vi/Pg2MTT-9U70/hqdefault.jpg' where idusuario = 4
 
 
 

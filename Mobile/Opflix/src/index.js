@@ -6,6 +6,7 @@ import { createAppContainer, createSwitchNavigator ,} from 'react-navigation';
 import MainScreen from './Pages/Main';
 import CadastroScreen from './Pages/Cadastrar';
 import CategoriasScreen from './Pages/Categoria'
+import userScreen from './Pages/user'
 
 
 const AuthStack = createBottomTabNavigator({
@@ -22,8 +23,8 @@ const AuthStack = createBottomTabNavigator({
     tabBarOptions: {
       showLabel: true,
       showIcon: true,
-      activeBackgroundColor: '#FF0000',
-      inactiveBackgroundColor: 'white',
+      activeBackgroundColor: '#e6e6e6',
+      inactiveBackgroundColor: '',
       style: {
         width: '100%',
         height: 50  
@@ -39,6 +40,9 @@ const MainNavigator = createBottomTabNavigator({
     },
     Categorias:{
         screen: CategoriasScreen
+    },
+    user : {
+        screen: userScreen
     }    
 },
 {
@@ -46,7 +50,7 @@ const MainNavigator = createBottomTabNavigator({
     tabBarOptions: {
       showLabel: true,
       showIcon: true,
-      activeBackgroundColor: '#FF0000',
+      activeBackgroundColor: '#ff8080',
       inactiveBackgroundColor: 'white',
       style: {
         width: '100%',

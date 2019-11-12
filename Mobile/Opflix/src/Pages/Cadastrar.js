@@ -57,7 +57,8 @@ export default class SignIn extends Component {
         this.state = {
             nome: '',
             email: '',
-            senha: ''
+            senha: '',
+            imagem: ''
 
         }
     }
@@ -67,6 +68,7 @@ export default class SignIn extends Component {
     _irParaSeiLaOnde = () => {
         this.props.navigation.navigate('Cadastro')
     }
+    
 
     _RealizarCadastro = async () => {
         await fetch('http://192.168.3.201:5000/api/usuarios', {
@@ -79,6 +81,7 @@ export default class SignIn extends Component {
                 nome:this.state.nome,
                 email: this.state.email,
                 senha: this.state.senha,
+                imagem: this.state.imagem,
                 permissao:"Usuario"
             })
         })
@@ -101,6 +104,7 @@ export default class SignIn extends Component {
             <View style={styles.App}>
                 <TextInput placeholder='Nome' placeholderTextColor='#000000' onChangeText={(nome => this.setState({ nome: nome }))} style={styles.Input} />
                 <TextInput placeholder='EMAIL' placeholderTextColor='#000000' onChangeText={(email => this.setState({ email: email }))} style={styles.Input} />
+                <TextInput placeholder='Imagem de perfil' placeholderTextColor='#000000' onChangeText={(imagem => this.setState({ imagem: imagem }))} style={styles.Input} />
                 <TextInput placeholder='SENHA' placeholderTextColor='#000000' onChangeText={(senha => this.setState({ senha: senha }))} secureTextEntry={true} style={styles.Input} />
 
                 <TouchableOpacity onPress={this._RealizarCadastro}>

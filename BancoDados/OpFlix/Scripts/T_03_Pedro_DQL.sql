@@ -3,6 +3,8 @@ Use T_OpFlix
 SELECT *
 FROM Usuarios
 
+delete from Usuarios where IdUsuario = 66
+
 SELECT *
 FROM Tipos
 
@@ -39,7 +41,7 @@ select Nome, IdCategoria
 from Lancamentos 
 where IdCategoria = @IdCategoria
 
-exec PesquisarPorId  '1'
+exec PesquisarPorId  '66'
 
 
 

@@ -120,14 +120,16 @@ namespace Senai.OpFlix.WebApi.Domains
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Imagem).HasColumnType("image");
+                entity.Property(e => e.Imagem).HasColumnType("text");
 
                 entity.Property(e => e.Nome)
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Permissao).HasDefaultValueSql("((0))");
+                entity.Property(e => e.Permissao)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Senha)
                     .IsRequired()

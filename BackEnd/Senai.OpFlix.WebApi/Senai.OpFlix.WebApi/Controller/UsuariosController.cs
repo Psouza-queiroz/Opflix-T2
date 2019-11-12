@@ -37,13 +37,14 @@ namespace Senai.OpFlix.WebApi.Controller
                     if (usuarioBuscado == null)
                         return NotFound(new { mensagem = "Email ou Senha Inválidos." });
 
-                    // informacoes referentes ao usuarios
-                    var claims = new[]
-                   {
+                // informacoes referentes ao usuarios
+                var claims = new[]
+               {
                         new Claim("chave", "0123456789"),
                         new Claim(JwtRegisteredClaimNames.Email, usuarioBuscado.Email),
                         new Claim(JwtRegisteredClaimNames.Jti, usuarioBuscado.IdUsuario.ToString()),
                         new Claim(ClaimTypes.Role, usuarioBuscado.Permissao),
+                        new Claim( "Imagem", usuarioBuscado.Imagem.ToString()),
                         new Claim("Permissao", usuarioBuscado.Permissao),
 
                     };

@@ -69,8 +69,9 @@ export default class SignIn extends Component {
         super();
 
         this.state = {
-            email: 'erik@gmail.com',
-            senha: '123456'
+            email: '',
+            senha: '',
+            
 
         }
     }
@@ -120,7 +121,7 @@ export default class SignIn extends Component {
 
                 <TextInput placeholder='EMAIL' placeholderTextColor='#000000' onChangeText={(email => this.setState({ email: email }))} style={styles.Input} />
                 <TextInput placeholder='SENHA' placeholderTextColor='#000000' onChangeText={(senha => this.setState({ senha: senha }))} secureTextEntry={true} style={styles.Input} />
-
+                
                 <TouchableOpacity onPress={this._RealizarLogin}>
 
                     <Text style={styles.button}>Login</Text>

@@ -66,7 +66,7 @@ INSERT INTO Lancamentos (Nome,Sinopse,DuracaoMin,DataDeLancamento,IdPlataforma,I
 INSERT INTO Lancamentos (Nome,Sinopse,DuracaoMin,DataDeLancamento,IdPlataforma,IdCategoria,IdTipo,IdClassificacao) Values ('Guardiões da Galáxia','O aventureiro do espaço Peter Quill torna-se presa de caçadores de recompensas depois que rouba a esfera de um vilão traiçoeiro, Ronan. Para escapar do perigo, ele faz uma aliança com um grupo de quatro extraterrestres.','145','31/07/2014','1','6','1','2')
 
 
-Update Usuarios set Imagem = 'https://www.wbkidsgo.com/Portals/4/Images/Content/Characters/Velma/velma-SD_headShot.png?ver=2015-05-15-175432-847' where IdUsuario = 3
+Update Usuarios set Imagem = 'https://media.licdn.com/dms/image/C4D03AQGRui2aMUIQUA/profile-displayphoto-shrink_800_800/0?e=1579132800&v=beta&t=QY4_mz0epKObpoCNaY-yY41j_9jVEx2draxOmu16QiY' where IdUsuario = 1
 
 update Usuarios
 set  Permissao = 'administrador'

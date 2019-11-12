@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     },
     listValue: {
         fontSize: 20,
-        color:'lightgrey'
+        color:'red'
     },
     Titulo:{
         fontSize: 15,
@@ -103,6 +103,26 @@ class Main extends Component {
                                 <View>
                                     <Text style={styles.Titulo}>Sinopse:</Text>
                                     <Text>{item.sinopse}</Text>
+                                </View>
+                                <View>
+                                    <Text style={styles.Titulo}>duracaoMin:</Text>
+                                    <Text>{item.duracaoMin}</Text>
+                                </View>
+                                <View>
+                                    <Text style={styles.Titulo}>dataDeLancamento:</Text>
+                                    <Text>{item.dataDeLancamento}</Text>
+                                </View>
+                                <View>
+                                    <Text style={styles.Titulo}>Categoria:</Text>
+                                    <Text>{item.idCategoriaNavigation.categoria}</Text>
+                                </View>
+                                <View>
+                                    <Text style={styles.Titulo}>Tipo:</Text>
+                                    <Text>{item.idTipoNavigation.tipo}</Text>
+                                </View>
+                                <View>
+                                    <Text style={styles.Titulo}>:</Text>
+                                    <Text>{item.idClassificacaoNavigation.classificacao1}</Text>
                                 </View>
                             </View>
                         )}
