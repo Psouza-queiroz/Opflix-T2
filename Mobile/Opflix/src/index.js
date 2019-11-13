@@ -5,7 +5,6 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer, createSwitchNavigator ,} from 'react-navigation';
 import MainScreen from './Pages/Main';
 import CadastroScreen from './Pages/Cadastrar';
-import CategoriasScreen from './Pages/Categoria'
 import userScreen from './Pages/user'
 
 
@@ -38,9 +37,7 @@ const MainNavigator = createBottomTabNavigator({
     Lancamentos: {
         screen: MainScreen
     },
-    Categorias:{
-        screen: CategoriasScreen
-    },
+    
     user : {
         screen: userScreen
     }    

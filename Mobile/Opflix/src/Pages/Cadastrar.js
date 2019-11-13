@@ -82,7 +82,8 @@ export default class SignIn extends Component {
                 email: this.state.email,
                 senha: this.state.senha,
                 imagem: this.state.imagem,
-                permissao:"Usuario"
+                permissao:"Usuario",
+                imagem:"https://pbs.twimg.com/media/Csx_VnCXEAA8Q5r.jpg:large"
             })
         })
 

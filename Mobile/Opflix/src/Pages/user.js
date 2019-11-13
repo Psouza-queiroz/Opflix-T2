@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         borderRadius: 100,
         borderColor: '#fff',
         borderWidth: 1,
-        marginHorizontal: 12,
+        alignSelf:'center',
         marginVertical: 10,
         
     },
@@ -66,7 +66,7 @@ export default class user extends Component {
         super();
         this.state = {
             user: [],
-            imagem :''
+           
 
         }
 

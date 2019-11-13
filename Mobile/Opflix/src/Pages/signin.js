@@ -9,8 +9,8 @@ import {
     TouchableOpacity,
     StyleSheet,
     AsyncStorage,
-    Linking
-    , Image
+   
+     Image
     , ImageBackground
 
 } from 'react-native';
@@ -69,6 +69,7 @@ export default class SignIn extends Component {
         super();
 
         this.state = {
+            
             email: '',
             senha: '',
             
@@ -111,12 +112,16 @@ export default class SignIn extends Component {
             .then(data => this._irParaHome(data.token))
             .catch(error => console.warn(error));
     }
+    
 
     render() {
         return (
-            // <ImageBackground style={{width: '100%', height: '100%'}} source={require('../assets/back.png') }>
+          
 
             <View style={styles.app}>
+                <View>
+
+
                 <Image style={styles.Image} source={require('../assets/logo_opflix.png')}></Image>
 
                 <TextInput placeholder='EMAIL' placeholderTextColor='#000000' onChangeText={(email => this.setState({ email: email }))} style={styles.Input} />
@@ -125,12 +130,14 @@ export default class SignIn extends Component {
                 <TouchableOpacity onPress={this._RealizarLogin}>
 
                     <Text style={styles.button}>Login</Text>
+                    
                 </TouchableOpacity>
 
+                </View>
 
 
             </View>
-            // </ImageBackground>
+        
         );
 
     }

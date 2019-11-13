@@ -51,10 +51,12 @@ IdLancamento INT PRIMARY KEY IDENTITY
 ALTER TABLE Usuarios ADD Permissao VARCHAR(255)
 ALTER TABLE Usuarios DROP column Permissao
 
-select * from usuarios
+alter table Lancamentos add Imagem text  default ('https://image.flaticon.com/icons/png/512/83/83519.png')
+
+select * from Lancamentos
 
 
-update Usuarios set Imagem = 'https://i.ytimg.com/vi/Pg2MTT-9U70/hqdefault.jpg' where idusuario = 4
+update Lancamentos set Imagem = 'https://image.flaticon.com/icons/png/512/83/83519.png'
 
 
 

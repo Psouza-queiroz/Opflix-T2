@@ -59,6 +59,10 @@ namespace Senai.OpFlix.WebApi.Domains
 
                 entity.Property(e => e.DataDeLancamento).HasColumnType("date");
 
+                entity.Property(e => e.Imagem)
+                    .HasColumnType("text")
+                    .HasDefaultValueSql("('https://image.flaticon.com/icons/png/512/83/83519.png')");
+
                 entity.Property(e => e.Nome)
                     .IsRequired()
                     .HasMaxLength(255)
