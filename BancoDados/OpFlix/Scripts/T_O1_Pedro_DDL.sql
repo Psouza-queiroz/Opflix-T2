@@ -53,10 +53,10 @@ ALTER TABLE Usuarios DROP column Permissao
 
 alter table Lancamentos add Imagem text  default ('https://image.flaticon.com/icons/png/512/83/83519.png')
 
-select * from Lancamentos
+select * from usuarios
 
 
-update Lancamentos set Imagem = 'https://image.flaticon.com/icons/png/512/83/83519.png'
+update Lancamentos set Imagem = 'https://upload.wikimedia.org/wikipedia/pt/b/b2/Guardiansgalaxyposter.jpg'where idLancamento = 10
 
 
 

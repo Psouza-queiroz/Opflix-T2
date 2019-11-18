@@ -24,7 +24,7 @@ export default class dashboard extends Component {
 
     listarCategorias = () => {
 
-        Axios.get("http://localhost:5000/api/categorias", {
+        Axios.get("http://192.168.3.201:5000/api/categorias", {
             headers: { 'Authorization': 'Bearer ' + localStorage.getItem('usuario-opflix') }
         })
             .then(Response => {
@@ -59,7 +59,7 @@ export default class dashboard extends Component {
     CadastrarCategoria = (event) => {
         event.preventDefault()
 
-        Axios.post("http://localhost:5000/api/categorias", {
+        Axios.post("http://192.168.3.201:5000/api/categorias", {
         
             categoria: this.state.nome,
         }, {
@@ -74,7 +74,7 @@ export default class dashboard extends Component {
             })
     }
     ListarUsuarios = () => {
-        Axios.get("http://localhost:5000/api/usuarios", {
+        Axios.get("http://192.168.3.201:5000/api/usuarios", {
             headers: { 'Authorization': 'Bearer ' + localStorage.getItem('usuario-opflix') }
         })
             .then(Response => {
@@ -85,7 +85,7 @@ export default class dashboard extends Component {
 
         event.preventDefault();
 
-        Axios.post("http://localhost:5000/api/usuarios", {
+        Axios.post("http://192.168.3.201:5000/api/usuarios", {
             nome: this.state.nomeu,
             email: this.state.email,
             senha: this.state.senha,

@@ -47,16 +47,20 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: 'bold',
         color: '#fff'
+        
     },
     imagem:{
-        height: 100,
-        width: 100,
-        alignContent:'center'
+        height: 300,
+        width: 200,
+        flex: 1,
+        borderRadius:15.5,
+        marginLeft: 100
     
     },
     picker: {
         borderRadius: 50,
     },
+    
 
 
 
@@ -156,16 +160,20 @@ class Main extends Component {
                                     keyExtractor={key => key.idLancamento}
                                     renderItem={({ item }) => (
                                         <View style={styles.listItem}>
-                                            <View style={styles.listRow}>
-                                                
+                                             <View >
+                                                    <Image 
+                                                    style={styles.imagem} 
+                                                    source={{ uri: item.imagem}}
+                                                    />
+                                            </View>
+                                            
+                                             <View style={styles.listRow}>
                                                 <Text style={styles.Titulo} >Nome:</Text>
                                                 <Text style={styles.listValue}>{item.nome}</Text>
-
                                             </View>
                                             <View>
                                                 <Text style={styles.Titulo}>Sinopse:</Text>
                                                 <Text>{item.sinopse}</Text>
-
                                             </View>
                                             <View>
                                                 <Text style={styles.Titulo}>duracaoMin:</Text>
@@ -186,7 +194,8 @@ class Main extends Component {
                                             <View>
                                                 <Text style={styles.Titulo}>:</Text>
                                                 <Text>{item.idClassificacaoNavigation.classificacao1}</Text>
-                                            </View>
+                                            </View> 
+                                           
                                         </View>
                                     )}
                                 /> :
@@ -195,16 +204,10 @@ class Main extends Component {
                                         keyExtractor={key => key.idLancamento}
                                         renderItem={({ item }) => (
                                             <View style={styles.listItem}>
-                                                <View style={styles.listRow}>
-                                                    {/* <Image source={{ uri: item.imagem }}></Image> */}
-                                
-
+                                                <View style={styles.listRow}>                                        
                                                     <Text style={styles.Titulo} >Nome:</Text>
                                                     <Text style={styles.listValue}>{item.nome}</Text>
-                                                    <Image
-                                                        style={styles.imagem}
-                                                        source={{ uri: item.imagem}}
-                                                    />
+                                                   
                                                 </View>
                                                 <View>
 
@@ -231,6 +234,11 @@ class Main extends Component {
                                                     <Text style={styles.Titulo}>:</Text>
                                                     <Text>{item.idClassificacaoNavigation.classificacao1}</Text>
                                                 </View>
+                                                {/* <View style={styles.imagem} >
+                                                    <Image 
+                                                    source={{ uri: item.imagem}}
+                                                    />
+                                                    </View> */}
                                             </View>
                                         )}
                                     />}

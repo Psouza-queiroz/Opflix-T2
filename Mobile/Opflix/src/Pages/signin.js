@@ -71,8 +71,7 @@ export default class SignIn extends Component {
         this.state = {
             
             email: '',
-            senha: '',
-            
+            senha: '',           
 
         }
     }

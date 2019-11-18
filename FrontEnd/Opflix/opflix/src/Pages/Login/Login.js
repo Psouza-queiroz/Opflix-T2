@@ -34,7 +34,7 @@ export default class Login extends Component {
   LogarUsuario = (event) => {
     event.preventDefault();
     console.log("Deveria estar indo")
-    Axios.post("http://localhost:5000/api/usuarios/login", {
+    Axios.post("http://192.168.3.201:5000/api/usuarios/login", {
 
       email: this.state.email,
       senha: this.state.senha

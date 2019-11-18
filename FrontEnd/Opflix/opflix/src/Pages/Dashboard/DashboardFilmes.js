@@ -56,7 +56,7 @@ export default class dashboard extends Component {
 
     listarLancamentos = () => {
 
-        Axios.get("http://localhost:5000/api/Lancamentos", {
+        Axios.get("http://192.168.3.201:5000/api/Lancamentos", {
         })
             .then(Response => {
                 this.setState({ lista: Response.data })
@@ -65,7 +65,7 @@ export default class dashboard extends Component {
 
     listarTipos = () => {
 
-        Axios.get("http://localhost:5000/api/Tipos", {
+        Axios.get("http://192.168.3.201:5000/api/Tipos", {
         })
             .then(Response => {
                 this.setState({ listaTipos: Response.data })
@@ -74,7 +74,7 @@ export default class dashboard extends Component {
 
     listarClassificacao = () => {
 
-        Axios.get("http://localhost:5000/api/Classificacao", {
+        Axios.get("http://192.168.3.201:5000/api/Classificacao", {
         })
             .then(Response => {
                 this.setState({ listaClassificacao: Response.data })
@@ -83,7 +83,7 @@ export default class dashboard extends Component {
 
     listarCategorias = () => {
 
-        Axios.get("http://localhost:5000/api/categorias", {
+        Axios.get("http://192.168.3.201:5000/api/categorias", {
             headers: { 'Authorization': 'Bearer ' + localStorage.getItem('usuario-opflix') }
         })
             .then(Response => {
@@ -101,7 +101,7 @@ export default class dashboard extends Component {
     CadastrarLancamento = (event) => {
         event.preventDefault();
         console.log('chegou')
-        Axios.post("http://localhost:5000/api/Lancamentos", {
+        Axios.post("http://192.168.3.201:5000/api/Lancamentos", {
             nome: this.state.nome,
             sinopse: this.state.sinopse,
             duracaoMin: Number(this.state.duracaoMin),
