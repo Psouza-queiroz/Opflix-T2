@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
 
     },
     App:{
-        height: '100%',
-        display: 'flex',
+        flex:1,
+        backgroundColor:'#111',
         justifyContent: 'center'
         
     },

@@ -21,7 +21,9 @@ import {
 const styles = StyleSheet.create({
     Input: {
         fontSize: 20,
-        alignSelf: "center"
+        alignSelf: "center",
+        color:'red',
+        
     },
 
     button: {
@@ -30,13 +32,13 @@ const styles = StyleSheet.create({
         fontFamily: 'Agency FB',
         alignSelf: 'center',
     },
-    app: {
-        height: '100%',
-        display: 'flex',
+    app: {  
+    
         justifyContent: 'center',
         flex: 1,
         alignContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: 'black'
     },
     tabBarEstilizacao: {
         width: 25,
@@ -47,6 +49,16 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
     },
+    login:{
+        width:300,
+        height:150,
+        marginVertical: 15,
+        backgroundColor: 'white',
+        borderColor: 'black',
+        borderRadius: 14.5,
+        borderWidth: 1,
+        margin: 20,
+    }
 })
 
 
@@ -118,11 +130,12 @@ export default class SignIn extends Component {
           
 
             <View style={styles.app}>
-                <View>
+                <View >
 
 
                 <Image style={styles.Image} source={require('../assets/logo_opflix.png')}></Image>
-
+                </View>
+                <View style={styles.login}  >
                 <TextInput placeholder='EMAIL' placeholderTextColor='#000000' onChangeText={(email => this.setState({ email: email }))} style={styles.Input} />
                 <TextInput placeholder='SENHA' placeholderTextColor='#000000' onChangeText={(senha => this.setState({ senha: senha }))} secureTextEntry={true} style={styles.Input} />
                 

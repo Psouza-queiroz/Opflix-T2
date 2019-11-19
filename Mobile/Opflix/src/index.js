@@ -45,13 +45,14 @@ const MainNavigator = createBottomTabNavigator({
 {
     initialRouteName: 'Lancamentos',
     tabBarOptions: {
-      showLabel: true,
+      showLabel: false,
       showIcon: true,
       activeBackgroundColor: '#ff8080',
       inactiveBackgroundColor: 'white',
       style: {
         width: '100%',
-        height: 50  
+        height: 50  ,
+        backgroundColor:'black'
 }
     }
 }

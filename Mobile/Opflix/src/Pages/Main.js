@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     tudo: {
         backgroundColor: "black",
         width: '100%',
-        height: '100%'
+        flex:1,
     },
     listItem: {
         marginVertical: 15,
