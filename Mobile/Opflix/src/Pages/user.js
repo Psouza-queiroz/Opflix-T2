@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 
 import jwt from 'jwt-decode'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const styles = StyleSheet.create({
 
@@ -38,15 +39,22 @@ const styles = StyleSheet.create({
         alignSelf: 'center'
     },
     tudo: {
-        backgroundColor: '#333333',
+        backgroundColor: 'black',
         height: '100%',
         width: '100%',
+
 
     },
     tabBarEstilizacao: {
         width: 25,
         height: 25,
 
+    },
+    button: {
+        color: 'red',
+        fontSize: 21,
+        fontFamily: 'Agency FB',
+        alignSelf: 'center',
     },
 })
 
@@ -79,9 +87,14 @@ export default class user extends Component {
         console.warn(decoded)
         this.setState({ user: decoded })
     }
+    _Logout = () =>{
+        AsyncStorage.removeItem('@Opflix:token');
+        this.props.navigation.navigate('AuthStack')
+    }
 
     componentDidMount() {
         this._UserToken();
+    
         
     }
 
@@ -93,7 +106,13 @@ export default class user extends Component {
                     <Image source={{ uri: this.state.user.Imagem }} style={styles.imagem} />
                     <Text style={styles.username}>{this.state.user.email}</Text>
                     <Text style={styles.username}>{this.state.user.Permissao}</Text>
+
+                    <TouchableOpacity>
+
+                    <Text  style={styles.button} onPress={this._Logout}>Des loga</Text>
+                    </TouchableOpacity>
                 </View>
+                
 
             </View>
         );

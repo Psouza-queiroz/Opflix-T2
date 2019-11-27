@@ -13,6 +13,7 @@ import {
     Image
 
 } from 'react-native';
+import { StackViewStyleInterpolator } from 'react-navigation-stack';
 
 
 
@@ -31,9 +32,11 @@ const styles = StyleSheet.create({
 
     },
     App:{
-        flex:1,
-        backgroundColor:'#111',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        flex: 1,
+        alignContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'black'
         
     },
     tabBarEstilizacao: {
@@ -41,6 +44,16 @@ const styles = StyleSheet.create({
         height: 25,
 
     },
+    login:{
+        width:300,
+        height:150,
+        marginVertical: 15,
+        backgroundColor: 'white',
+        borderColor: 'black',
+        borderRadius: 14.5,
+        borderWidth: 1,
+        margin: 20,
+    }
     
 })
 
@@ -103,11 +116,19 @@ export default class SignIn extends Component {
     render() {
         return (
             <View style={styles.App}>
+
+                <View>
+
+                <Image style={styles.Image} source={require('../assets/logo_opflix.png')}></Image>
+                </View>
+                <View style={styles.login}>
+
                 <TextInput placeholder='Nome' placeholderTextColor='#000000' onChangeText={(nome => this.setState({ nome: nome }))} style={styles.Input} />
                 <TextInput placeholder='EMAIL' placeholderTextColor='#000000' onChangeText={(email => this.setState({ email: email }))} style={styles.Input} />
                 <TextInput placeholder='Imagem de perfil' placeholderTextColor='#000000' onChangeText={(imagem => this.setState({ imagem: imagem }))} style={styles.Input} />
                 <TextInput placeholder='SENHA' placeholderTextColor='#000000' onChangeText={(senha => this.setState({ senha: senha }))} secureTextEntry={true} style={styles.Input} />
 
+                </View>
                 <TouchableOpacity onPress={this._RealizarCadastro}>
 
                     <Text style={styles.button}>Cadastro</Text>
