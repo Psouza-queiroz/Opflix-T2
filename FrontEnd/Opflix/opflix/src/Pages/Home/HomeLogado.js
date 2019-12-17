@@ -18,14 +18,17 @@ import { Link } from "react-router-dom";
         <ul>
           <Link to="/dashboardfilme
           "><li>Lancamentos</li></Link>
+
+<Link to="/localizacao"><li>localizacao</li></Link>
         </ul>
-    
+
+   
     <img src={logo} width="100px" height="50%" />
 
     <div className="login">
       <ul>
         <li>Bem vindo ...</li>
-        <li><Link to="/ ">Deslogar</Link></li>
+        <li><Link to="/">Deslogar</Link></li>
       </ul>
     </div>
   </div>

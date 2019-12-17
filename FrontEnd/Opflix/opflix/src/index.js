@@ -10,6 +10,7 @@ import Cadastrar from './Pages/Cadastrar/Cadastrar'
 import Login from './Pages/Login/Login'
 import Dashboard from './Pages/Dashboard/Dashboard'
 import DashboardFilmes from './Pages/Dashboard/DashboardFilmes'
+import Localizacao from './Pages/Localizacao/Localizacao'
 
 import { Route, Link, BrowserRouter as Router, Switch, Redirect} from "react-router-dom";
 
@@ -43,6 +44,7 @@ const routing = (
                 <Route  path='/login' component={Login} />
                 <Route path ='/dashboard' component={Dashboard}/>
                 <Route path ='/dashboardfilme' component={DashboardFilmes}/>
+                <Route path ='/localizacao' component={Localizacao}/>
 
                 
                 <PermissaoComum  path='/Home' component={Home} />

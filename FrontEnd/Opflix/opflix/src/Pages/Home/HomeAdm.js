@@ -23,6 +23,10 @@ function Adm() {
           <ul>
             <Link to="/dashboard"><li>Categorias</li></Link>
           </ul>
+          <ul>
+          <Link to="/localizacao"><li>localizacao</li></Link>
+          </ul>
+         
         </div>
 
         <img src={logo} width="100px" height="50%" />
